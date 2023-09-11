@@ -1,7 +1,7 @@
 # GSU_beamer_template
 A LaTeX Beamer template featuring Georgia State University
 
-![Sample](first_page.png)
+![Sample](firstpage.jpg)
 
 ## Description
 The purpose for this template is to create "neatly organized," "concisely presented," and "aesthetically pleasing" slides while helping the presenter focus more on the content instead of the format.
