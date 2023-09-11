@@ -1,0 +1,211 @@
+\documentclass{beamer}
+\usepackage{xcolor}
+\usepackage{amsmath,amsfonts}
+
+\usetheme{Warsaw} % Alternatively: Copenhagen, Warsaw
+
+\definecolor{GSUThemeBlue}{rgb}{0.0,0.22,0.65}
+\definecolor{GSURedAccent}{rgb}{0.78,0.05,0.19}
+\definecolor{GSUBlueSteel}{rgb}{0.22,0.25,0.34}
+\definecolor{GSUCoolBlue}{rgb}{0.0,0.44,0.81}
+\definecolor{GSUVibrantBlue}{rgb}{0.0,0.69,0.94}
+\definecolor{GSULightBlue}{rgb}{0.59,0.79,0.92}
+\definecolor{GSULightGray}{rgb}{0.93,0.93,0.93}
+\definecolor{GSUMediumGray}{rgb}{0.8,0.8,0.8}
+\definecolor{GSUDarkGray}{rgb}{0.47,0.46,0.47}
+
+%\usecolortheme[named=GSUThemeBlue]{structure}
+\setbeamercolor{palette primary}{bg=GSUThemeBlue,fg=white}
+\setbeamercolor{palette secondary}{bg=GSUThemeBlue,fg=white}
+\setbeamercolor{palette tertiary}{bg=GSUBlueSteel,fg=white}
+\setbeamercolor{palette quaternary}{bg=GSULightBlue,fg=white}
+\setbeamercolor{structure}{fg=GSUThemeBlue} % itemize, enumerate, etc
+\setbeamercolor{section in toc}{fg=GSUBlueSteel} % TOC sections
+%
+%% Override palette coloring with secondary
+\setbeamercolor{subsection in head/foot}{bg=GSUThemeBlue,fg=white}
+\setbeamercolor{block title alerted}{bg=GSURedAccent,fg=white}
+\setbeamercolor{block title}{bg=GSUThemeBlue,fg=white}
+\setbeamercolor{alerted text}{fg=GSURedAccent}
+
+\useoutertheme{infolines} % Alternatively: default, miniframes, infolines, split, shadow
+\useinnertheme{circles}
+
+\usefonttheme[onlymath]{serif}
+\usefonttheme[onlylarge]{structurebold} % Alternatively in {}: structurebold, structureitalicserif, structuresmallcapsserif; in []: onlylarge, onlysmall
+
+\setbeamertemplate{footline}
+{%
+	\leavevmode
+	\begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+		\insertshortauthor{}
+	\end{beamercolorbox}%
+	\begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,center]{subsection in head/foot}%
+		\insertshorttitle
+	\end{beamercolorbox}%
+}
+
+
+%% footline with page number (spacing needs maual adjustments)
+%\setbeamertemplate{footline}
+%{%
+%	\leavevmode
+%	\begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+%		\insertshortauthor{}
+%	\end{beamercolorbox}%
+%	\begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,left]{subsection in head/foot}%
+%		\hspace*{.15\paperwidth}\insertshorttitle\hspace*{.12\paperwidth}\insertframenumber/\inserttotalframenumber	% adjust page number spacing here
+%	\end{beamercolorbox}%
+%}
+
+
+\title[Short title]{Your Presentation Title}
+\date{\today}
+\author[F. L.]{Firstname Lastname}
+\institute[GSU]{Georgia State University}
+\titlegraphic{\includegraphics[width=2.5cm]{PrimaryLogo3color.jpg}}
+\begin{document}
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	\begin{frame}
+		\tableofcontents
+	\end{frame}
+
+	\section{First Section}
+	\begin{frame}{First Frame}
+		Hello, world!
+	\end{frame}
+	\begin{frame}{Color Table}
+		
+		\begin{columns}
+			\begin{column}{0.33\textwidth}
+				\begin{itemize}
+					\item \textcolor{GSUThemeBlue}{GSU Theme Blue}
+					\item \textcolor{GSUCoolBlue}{GSU Cool Blue}
+					\item \textcolor{GSUVibrantBlue}{GSU Vibrant Blue}
+					\item \textcolor{GSULightBlue}{GSU Light Blue}
+				\end{itemize}
+			\end{column}
+			
+			\begin{column}{0.33\textwidth}
+				\begin{itemize}
+					\item \textcolor{GSUBlueSteel}{GSU Blue Steel}
+					\item \textcolor{GSUDarkGray}{GSU Dark Gray}
+					\item \textcolor{GSUMediumGray}{GSU Medium Gray}
+					\item \textcolor{GSULightGray}{GSU Light Gray}
+				\end{itemize}
+			\end{column}
+		
+			\begin{column}{0.33\textwidth}
+				\begin{itemize}
+					\item \textcolor{GSURedAccent}{GSU Red Accent}
+				\end{itemize}
+			\end{column}
+		\end{columns}
+		
+	\end{frame}
+	
+	\begin{frame}{Font size in Beamer (default)}
+		\tiny This is tiny font size
+		\scriptsize This is scriptsize font size
+		\footnotesize This is footnotesize font size
+		\small This is small font size
+		\normalsize This is normalsize font size
+		\large This is large font size
+		\Large This is Large font size
+		\LARGE This is LARGE font size
+		\huge This is huge font size
+		\Huge This is Huge font size
+	\end{frame}
+
+	\section{Second Section}
+	\begin{frame}[fragile]{Blocks}
+		\begin{block}{Theorem 1}
+			This is a theorem.
+		\end{block}
+		\begin{proof}
+			Here you can briefly prove your Theorem 1.
+			
+			A proof is better not to be very long. Use \verb|\alert| to highlight \alert{important things}.
+		\end{proof}
+		
+		\begin{exampleblock}{Example 1}
+			This is an example.
+		\end{exampleblock}
+		
+		\begin{alertblock}{Alert 1}
+			Add \verb|[fragile]| after \verb|\begin{frame}| when using verbatim environments.
+		\end{alertblock}
+	\end{frame}
+
+	\section{Third Section}
+	\begin{frame}{Serif fonts in math}
+		A Dirichlet distribution is a distribution over the $K$-dimensional probability simplex:
+		$$
+		\Delta_K=\left\{\left(\pi_1, \ldots, \pi_K\right): \pi_k \geq 0, \sum_k \pi_k=1\right\}
+		$$
+		We say $\left(\pi_1, \ldots, \pi_K\right)$ is Dirichlet distributed,
+		$$
+		\left(\pi_1, \ldots, \pi_K\right) \sim \operatorname{Dirichlet}\left(\alpha_1, \ldots, \alpha_K\right)
+		$$
+		with parameters $\left(\alpha_1, \ldots, \alpha_K\right)$, if
+		$$
+		p\left(\pi_1, \ldots, \pi_K\right)=\frac{\Gamma\left(\sum_k \alpha_k\right)}{\prod_k \Gamma\left(\alpha_k\right)} \prod_{k=1}^K \pi_k^{\alpha_k-1}
+		$$
+	\end{frame}
+
+	\section{Fourth Section}
+	\begin{frame}{Notes if two screen allows}
+		\begin{itemize}
+			\item<1-> Eggs
+			\item<2-> Plants
+			\note[item]<2>{Tell joke about plants.}
+			\note[item]<2>{Make it short.}
+			\item<3-> Animals
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}{Highlighting the Current Item in an Enumeration}
+		\begin{itemize}
+			\item<1-| alert@1> First point.
+			\item<2-| alert@2> Second point.
+			\item<3-| alert@3> Third point.
+		\end{itemize}
+
+	\end{frame}
+
+	\begin{frame}{Uncovering Tagged Formulas Piecewise}
+		\begin{align*}
+			A &= B \\
+			\uncover<2->{&= C \\}
+			\uncover<3->{&= D \\}
+		\end{align*}
+	\end{frame}
+
+	\begin{frame}[fragile]{An Algorithm For Finding Primes Numbers.}
+		\begin{semiverbatim}
+			\uncover<1->{\alert<1>{int main (void)}}
+			\uncover<1->{\alert<1>{\{}}
+			\uncover<2->{\alert<2>{	\alert<5>{std::}vector<bool> is_prime (100, true);}}
+			\uncover<2->{\alert<2>{ for (int i = 2; i < 100; i++)}}
+			\uncover<3->{\alert<3>{ 	if (is_prime[i])}}
+			\uncover<3->{\alert<3>{ 		\{}}
+			\uncover<4->{\alert<4>{ 		\alert<5>{std::}cout << i << " ";}}
+			\uncover<4->{\alert<4>{ 		for (int j = i; j < 100;}}
+			\uncover<4->{\alert<4>{ 				is_prime [j] = false, j+=i);}}
+			\uncover<3->{\alert<3>{ 		\}}}
+			\uncover<1->{\alert<1>{ return 0;}}
+			\uncover<1->{\alert<1>{\}}}
+		\end{semiverbatim}
+		\visible<5->{Note the use of \alert{\texttt{std::}}.}
+	\end{frame}
+
+
+	%\appendix
+	\section*{} 
+	\begin{frame}{}
+		\centering \Huge
+		\emph{Thanks!}
+	\end{frame}
+\end{document}
