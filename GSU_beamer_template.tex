@@ -1,6 +1,7 @@
 \documentclass{beamer}
 \usepackage{xcolor}
 \usepackage{amsmath,amsfonts}
+\usepackage{appendixnumberbeamer}
 
 \usetheme{Warsaw} % Alternatively: Copenhagen, Warsaw
 
@@ -34,32 +35,33 @@
 \usefonttheme[onlymath]{serif}
 \usefonttheme[onlylarge]{structurebold} % Alternatively in {}: structurebold, structureitalicserif, structuresmallcapsserif; in []: onlylarge, onlysmall
 
-\setbeamertemplate{footline}
-{%
-	\leavevmode
-	\begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
-		\insertshortauthor{}
-	\end{beamercolorbox}%
-	\begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,center]{subsection in head/foot}%
-		\insertshorttitle
-	\end{beamercolorbox}%
-}
-
-
-%% footline with page number (spacing needs maual adjustments)
+%%% footline with no page number
 %\setbeamertemplate{footline}
 %{%
 %	\leavevmode
 %	\begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
 %		\insertshortauthor{}
 %	\end{beamercolorbox}%
-%	\begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,left]{subsection in head/foot}%
-%		\hspace*{.15\paperwidth}\insertshorttitle\hspace*{.12\paperwidth}\insertframenumber/\inserttotalframenumber	% adjust page number spacing here
+%	\begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,center]{subsection in head/foot}%
+%		\insertshorttitle
 %	\end{beamercolorbox}%
 %}
 
 
-\title[Short title]{Your Presentation Title}
+% footline with page number (spacing may need some maual adjustments)
+\setbeamertemplate{footline}
+{%
+	\leavevmode
+	\begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+		\insertshortauthor{}
+	\end{beamercolorbox}%
+	\begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,left]{subsection in head/foot}%
+		\hspace*{.2\paperwidth}\insertshorttitle\hspace*{.15\paperwidth}\insertframenumber/\inserttotalframenumber	% adjust page number spacing here
+	\end{beamercolorbox}%
+}
+
+
+\title[A Short title]{Your Presentation Title}
 \date{\today}
 \author[F. L.]{Firstname Lastname}
 \institute[GSU]{Georgia State University}
@@ -200,12 +202,20 @@
 		\end{semiverbatim}
 		\visible<5->{Note the use of \alert{\texttt{std::}}.}
 	\end{frame}
-
-
-	%\appendix
+	
 	\section*{} 
 	\begin{frame}{}
 		\centering \Huge
 		\emph{Thanks!}
 	\end{frame}
+
+	\appendix
+	\begin{frame}{Backup Slide1}
+		You can add some backup slides for expected questions from the audience.
+	\end{frame}
+
+	\begin{frame}{Backup Slide2}
+		These backup slides are independently numbered.
+	\end{frame}
+	
 \end{document}
