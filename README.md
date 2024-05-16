@@ -1,7 +1,7 @@
 # GSU_beamer_template
 A LaTeX Beamer template featuring Georgia State University
 
-![Sample](firstpage.jpg)
+![Sample](https://gist.github.com/assets/58758623/11c6d4eb-dc46-4528-82b6-bac970eed1ef)
 
 ## Description
 The purpose for this template is to create "neatly organized," "concisely presented," and "aesthetically pleasing" slides while helping the presenter focus more on the content instead of the format.
@@ -18,7 +18,7 @@ The template uses:
 
 ## Usage
 1. Clone the repository. (Or download `.zip` file from github website and unzip the file locally.)
-2. Edit and run the `GSU_beamer_template.tex` file.
+2. Edit and run the `GSU_beamer_template.tex` file. Of course you're encouraged to first rename and then run it.
 
 Note: You should obtain your own university logo permission if necessary although it is included in this repo.
 
@@ -30,7 +30,5 @@ Note: You should obtain your own university logo permission if necessary althoug
 ## Adapt to Your Organization Theme
 You can easily adapt the template to feature your own organization by changing the logo and color palette.
 
-
 ## License
-
 The template itself is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). This means that if you modify the template and redistribute it, you must retain the copyright notice header and re-license it under the same CC-BY-SA license. This does not affect the presentation that you create with the template.
